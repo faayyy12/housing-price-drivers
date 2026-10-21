@@ -1,0 +1,162 @@
+{
+  "overall": [
+    {
+      "age": 0,
+      "price_per_ping": 601780.3677596486
+    },
+    {
+      "age": 5,
+      "price_per_ping": 577780.0402910678
+    },
+    {
+      "age": 10,
+      "price_per_ping": 558313.7272199396
+    },
+    {
+      "age": 15,
+      "price_per_ping": 545777.3892405992
+    },
+    {
+      "age": 20,
+      "price_per_ping": 532679.1798600483
+    },
+    {
+      "age": 25,
+      "price_per_ping": 470248.02534446516
+    },
+    {
+      "age": 30,
+      "price_per_ping": 443295.91288358887
+    },
+    {
+      "age": 35,
+      "price_per_ping": 438363.2023778183
+    },
+    {
+      "age": 40,
+      "price_per_ping": 430459.33559465886
+    },
+    {
+      "age": 45,
+      "price_per_ping": 443553.83377205697
+    },
+    {
+      "age": 50,
+      "price_per_ping": 471091.10849675944
+    },
+    {
+      "age": 55,
+      "price_per_ping": 483902.5209012405
+    }
+  ],
+  "townhouse": [
+    {
+      "age": 0,
+      "price_per_ping": 512773.27019303705
+    },
+    {
+      "age": 5,
+      "price_per_ping": 478165.52934257756
+    },
+    {
+      "age": 10,
+      "price_per_ping": 458409.64240891486
+    },
+    {
+      "age": 15,
+      "price_per_ping": 442884.9165764977
+    },
+    {
+      "age": 20,
+      "price_per_ping": 437421.8606980746
+    },
+    {
+      "age": 30,
+      "price_per_ping": 348817.34053655615
+    },
+    {
+      "age": 40,
+      "price_per_ping": 346900.101676385
+    },
+    {
+      "age": 50,
+      "price_per_ping": 442766.65998391015
+    }
+  ],
+  "highrise": [
+    {
+      "age": 0,
+      "price_per_ping": 619745.8893596028
+    },
+    {
+      "age": 5,
+      "price_per_ping": 593908.4107996366
+    },
+    {
+      "age": 10,
+      "price_per_ping": 567510.8257903247
+    },
+    {
+      "age": 15,
+      "price_per_ping": 555490.717325839
+    },
+    {
+      "age": 20,
+      "price_per_ping": 541866.1959997099
+    },
+    {
+      "age": 30,
+      "price_per_ping": 446803.03712335706
+    },
+    {
+      "age": 40,
+      "price_per_ping": 430692.8364672113
+    },
+    {
+      "age": 50,
+      "price_per_ping": 468776.71894025046
+    }
+  ],
+  "floor_ratio": [
+    {
+      "floor_ratio": 0.1,
+      "price_per_ping": 533823.371306037
+    },
+    {
+      "floor_ratio": 0.2,
+      "price_per_ping": 533841.0736208309
+    },
+    {
+      "floor_ratio": 0.3,
+      "price_per_ping": 511269.06621431786
+    },
+    {
+      "floor_ratio": 0.4,
+      "price_per_ping": 494916.0520754702
+    },
+    {
+      "floor_ratio": 0.5,
+      "price_per_ping": 495741.25312267616
+    },
+    {
+      "floor_ratio": 0.6,
+      "price_per_ping": 496113.22152110044
+    },
+    {
+      "floor_ratio": 0.7,
+      "price_per_ping": 496408.9112119369
+    },
+    {
+      "floor_ratio": 0.8,
+      "price_per_ping": 494367.5443613061
+    },
+    {
+      "floor_ratio": 0.9,
+      "price_per_ping": 497197.7036210415
+    },
+    {
+      "floor_ratio": 1.0,
+      "price_per_ping": 494783.6698997045
+    }
+  ]
+}

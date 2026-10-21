@@ -1,0 +1,353 @@
+{
+  "format_version": 1,
+  "created_at_utc": "2026-10-20T07:32:39.139716+00:00",
+  "provenance": {
+    "source": "Existing local PostgreSQL tables; no ingestion, cleaning, or refresh was run",
+    "schema": "public",
+    "server_version": "PostgreSQL 18.4",
+    "read_only": true,
+    "isolation": "repeatable read",
+    "row_order": "Original SELECT physical order retained for reconstruction; not a stable transaction identifier",
+    "privacy": "Explicit allowlist excludes case_id, address, notes, source-file names and per-row load timestamps",
+    "numeric_representation": "PostgreSQL NUMERIC converted to IEEE float64, as in the original pandas read_sql model path; nullable integer/boolean/date types retained"
+  },
+  "coverage": {
+    "min_date": "2014-05-21",
+    "max_date": "2026-05-30",
+    "pre_2023_rows": 104,
+    "rows_from_2023": 100724
+  },
+  "modeling_population": {
+    "rows": 98054,
+    "dropped_rows": 2774,
+    "drop_rule": "building_age or total_floors is null",
+    "time_origin": "2014-05-21",
+    "latest_month_index": 144,
+    "category_counts": {
+      "district": 41,
+      "building_type": 4
+    }
+  },
+  "validation": {
+    "every_exported_field_compared_to_database": true,
+    "source_transaction_keys_unique": true,
+    "district_counts_match": true,
+    "maximum_district_median_difference_ntd": 2.2118911147117615e-09,
+    "pre_2023_rows_retained": 104,
+    "source_loaded_at_range": [
+      "2026-06-25T19:48:05.450308+08:00",
+      "2026-06-25T19:48:05.450308+08:00"
+    ]
+  },
+  "tables": {
+    "fct_transactions": {
+      "file": "fct_transactions.parquet",
+      "bytes": 2508733,
+      "sha256": "81bcd197b959c4d01b2cc345bbb6bb2171ded3bed9d74ad718caec15272cf943",
+      "rows": 100828,
+      "schema": [
+        {
+          "name": "city_code",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "district",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "txn_date",
+          "type": "date32[day]",
+          "nullable": true
+        },
+        {
+          "name": "price_per_ping",
+          "type": "double",
+          "nullable": true
+        },
+        {
+          "name": "log_price_per_ping",
+          "type": "double",
+          "nullable": true
+        },
+        {
+          "name": "building_age",
+          "type": "double",
+          "nullable": true
+        },
+        {
+          "name": "area_ping",
+          "type": "double",
+          "nullable": true
+        },
+        {
+          "name": "floor_level",
+          "type": "int32",
+          "nullable": true
+        },
+        {
+          "name": "total_floors",
+          "type": "int32",
+          "nullable": true
+        },
+        {
+          "name": "floor_ratio",
+          "type": "double",
+          "nullable": true
+        },
+        {
+          "name": "whole_building",
+          "type": "bool",
+          "nullable": true
+        },
+        {
+          "name": "has_terrace_or_arcade",
+          "type": "bool",
+          "nullable": true
+        },
+        {
+          "name": "building_type",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "rooms",
+          "type": "int32",
+          "nullable": true
+        },
+        {
+          "name": "halls",
+          "type": "int32",
+          "nullable": true
+        },
+        {
+          "name": "baths",
+          "type": "int32",
+          "nullable": true
+        },
+        {
+          "name": "has_management",
+          "type": "bool",
+          "nullable": true
+        },
+        {
+          "name": "bundled_parking",
+          "type": "bool",
+          "nullable": true
+        },
+        {
+          "name": "parking_price_is_zero",
+          "type": "bool",
+          "nullable": true
+        }
+      ],
+      "source_schema": [
+        {
+          "name": "city_code",
+          "type": "text",
+          "nullable": "NO"
+        },
+        {
+          "name": "district",
+          "type": "text",
+          "nullable": "NO"
+        },
+        {
+          "name": "txn_date",
+          "type": "date",
+          "nullable": "NO"
+        },
+        {
+          "name": "price_per_ping",
+          "type": "numeric",
+          "nullable": "NO"
+        },
+        {
+          "name": "log_price_per_ping",
+          "type": "numeric",
+          "nullable": "NO"
+        },
+        {
+          "name": "building_age",
+          "type": "numeric",
+          "nullable": "YES"
+        },
+        {
+          "name": "area_ping",
+          "type": "numeric",
+          "nullable": "NO"
+        },
+        {
+          "name": "floor_level",
+          "type": "integer",
+          "nullable": "YES"
+        },
+        {
+          "name": "total_floors",
+          "type": "integer",
+          "nullable": "YES"
+        },
+        {
+          "name": "floor_ratio",
+          "type": "numeric",
+          "nullable": "YES"
+        },
+        {
+          "name": "whole_building",
+          "type": "boolean",
+          "nullable": "NO"
+        },
+        {
+          "name": "has_terrace_or_arcade",
+          "type": "boolean",
+          "nullable": "NO"
+        },
+        {
+          "name": "building_type",
+          "type": "text",
+          "nullable": "YES"
+        },
+        {
+          "name": "rooms",
+          "type": "integer",
+          "nullable": "YES"
+        },
+        {
+          "name": "halls",
+          "type": "integer",
+          "nullable": "YES"
+        },
+        {
+          "name": "baths",
+          "type": "integer",
+          "nullable": "YES"
+        },
+        {
+          "name": "has_management",
+          "type": "boolean",
+          "nullable": "YES"
+        },
+        {
+          "name": "bundled_parking",
+          "type": "boolean",
+          "nullable": "NO"
+        },
+        {
+          "name": "parking_price_is_zero",
+          "type": "boolean",
+          "nullable": "NO"
+        }
+      ],
+      "max_decimal_to_float_error": {
+        "price_per_ping": 1.1345994472503662e-10,
+        "log_price_per_ping": 8.881628784001805e-16,
+        "building_age": 0.0,
+        "area_ping": 3.833625921979546e-14,
+        "floor_ratio": 5.329070518200751e-17
+      }
+    },
+    "dim_district": {
+      "file": "dim_district.parquet",
+      "bytes": 2150,
+      "sha256": "122f2456e867578e539453059461fe40a0bbe44feb6d1cd24b4c5505cda48a40",
+      "rows": 41,
+      "schema": [
+        {
+          "name": "city_code",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "district",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "txn_count",
+          "type": "int32",
+          "nullable": true
+        },
+        {
+          "name": "median_price_per_ping",
+          "type": "double",
+          "nullable": true
+        }
+      ],
+      "source_schema": [
+        {
+          "name": "city_code",
+          "type": "text",
+          "nullable": "NO"
+        },
+        {
+          "name": "district",
+          "type": "text",
+          "nullable": "NO"
+        },
+        {
+          "name": "txn_count",
+          "type": "integer",
+          "nullable": "NO"
+        },
+        {
+          "name": "median_price_per_ping",
+          "type": "numeric",
+          "nullable": "NO"
+        }
+      ],
+      "max_decimal_to_float_error": {
+        "median_price_per_ping": 5.810767412185669e-11
+      }
+    }
+  },
+  "analysis_evidence": {
+    "notebooks/analysis.ipynb": {
+      "sha256": "4605beb1ffacf561c37e0fcb14a5747dcefa5a695c38bfe0cb6204c9c9309418",
+      "bytes_at_export": 324272,
+      "sha256_mode": "normalize_crlf_to_lf"
+    },
+    "app/assets/age_floor_data.json": {
+      "sha256": "6c53c656a73b4f5c7aaf7584c542a2b8313209d7b0e2da9b0b5315f7e8894570",
+      "bytes_at_export": 3078,
+      "sha256_mode": "normalize_crlf_to_lf"
+    },
+    "app/assets/age_floor_partial_dependence.png": {
+      "sha256": "8f393adecefee174fa91d0f14da7cf52afc90a12450f86d7c704c539b3b19b7e",
+      "bytes_at_export": 123607,
+      "sha256_mode": "raw_bytes"
+    },
+    "app/assets/district_premium.png": {
+      "sha256": "71805e1009eb5cc5a72a53e778f8a369bde46b0cb1609a5674ff36948d1cfc1d",
+      "bytes_at_export": 49286,
+      "sha256_mode": "raw_bytes"
+    },
+    "app/assets/district_premium_data.json": {
+      "sha256": "a84757916a074a2f0d3b26db8382092c77b2993acddc3fe5ec7ad6d81cda1682",
+      "bytes_at_export": 3154,
+      "sha256_mode": "normalize_crlf_to_lf"
+    },
+    "app/assets/management_by_type.png": {
+      "sha256": "da16f0a6d8ef3b19fa332b8c5ed89f2e7565e22c3d37e3f1b2e503da62521f5c",
+      "bytes_at_export": 53037,
+      "sha256_mode": "raw_bytes"
+    },
+    "app/assets/management_by_type_data.json": {
+      "sha256": "bf8a2ee462e2a5160c6fd57a2a245495e53048ff0f0a6bfde7a93e2378d6c43a",
+      "bytes_at_export": 1057,
+      "sha256_mode": "normalize_crlf_to_lf"
+    },
+    "app/assets/shap_summary.png": {
+      "sha256": "4b3547f94ac66e4493e658c9e3662f9463a65d9eda03ef297ed7ab11579d9bba",
+      "bytes_at_export": 110308,
+      "sha256_mode": "raw_bytes"
+    }
+  },
+  "export_versions": {
+    "pandas": "3.0.1",
+    "numpy": "2.4.3",
+    "pyarrow": "24.0.0",
+    "psycopg2-binary": "2.9.12",
+    "python-dotenv": "1.1.0"
+  }
+}

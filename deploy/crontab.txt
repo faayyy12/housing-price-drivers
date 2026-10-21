@@ -1,0 +1,5 @@
+# Data updates on the 1st/11th/21st (verified cadence, see M0_NOTES.md) --
+# run the day after each update to give MOI's batch time to fully publish.
+# Add via `crontab -e` (adjust the path to wherever you clone the repo).
+
+0 6 2,12,22 * * /opt/housing-price-drivers/scripts/refresh.sh >> /opt/housing-price-drivers/logs/refresh.log 2>&1

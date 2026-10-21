@@ -1,0 +1,11 @@
+# Serving only. Community Cloud discovers this file at the repository root.
+# Tested with CPython 3.12.6; use Python 3.12 in Cloud Advanced settings.
+numpy==2.4.3
+pandas==3.0.1
+scipy==1.17.1
+pyarrow==24.0.0
+lightgbm==4.6.0
+streamlit==1.58.0
+plotly==6.8.0
+# Stay within the Community Cloud compatibility range documented by Streamlit.
+protobuf==5.29.6

@@ -1,0 +1,20 @@
+[Unit]
+Description=Taiwan Housing Price-Driver Dashboard (Streamlit)
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/housing-price-drivers
+EnvironmentFile=/opt/housing-price-drivers/.env
+ExecStart=/opt/housing-price-drivers/.venv/bin/streamlit run app/streamlit_app.py \
+    --server.address=127.0.0.1 \
+    --server.port=8501 \
+    --server.headless=true \
+    --browser.gatherUsageStats=false
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

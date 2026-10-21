@@ -1,0 +1,10 @@
+# Offline export, original PostgreSQL pipeline, training and notebook analysis.
+-r ../requirements.txt
+SQLAlchemy==2.0.41
+psycopg2-binary==2.9.12
+python-dotenv==1.1.0
+scikit-learn==1.8.0
+statsmodels==0.14.6
+shap==0.52.0
+matplotlib==3.10.8
+requests==2.32.3

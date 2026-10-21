@@ -1,0 +1,327 @@
+{
+  "format_version": 1,
+  "created_at_utc": "2026-10-20T07:33:57.932950+00:00",
+  "status": "Newly reconstructed locally from the preserved snapshot; original VPS models are unavailable, so exact former predictions cannot be established",
+  "training_snapshot_sha256": "81bcd197b959c4d01b2cc345bbb6bb2171ded3bed9d74ad718caec15272cf943",
+  "training_rows": 98054,
+  "feature_order": [
+    "building_age",
+    "area_ping",
+    "floor_ratio",
+    "total_floors",
+    "rooms",
+    "halls",
+    "baths",
+    "months_since_start",
+    "has_management_int",
+    "whole_building_int",
+    "bundled_parking_int",
+    "parking_price_is_zero_int",
+    "district",
+    "building_type"
+  ],
+  "categories": {
+    "district": [
+      "三峽區",
+      "三芝區",
+      "三重區",
+      "中和區",
+      "中山區",
+      "中正區",
+      "五股區",
+      "信義區",
+      "內湖區",
+      "八里區",
+      "北投區",
+      "南港區",
+      "土城區",
+      "坪林區",
+      "士林區",
+      "大同區",
+      "大安區",
+      "平溪區",
+      "文山區",
+      "新店區",
+      "新莊區",
+      "松山區",
+      "板橋區",
+      "林口區",
+      "樹林區",
+      "永和區",
+      "汐止區",
+      "泰山區",
+      "淡水區",
+      "深坑區",
+      "烏來區",
+      "瑞芳區",
+      "石碇區",
+      "石門區",
+      "萬華區",
+      "萬里區",
+      "蘆洲區",
+      "貢寮區",
+      "金山區",
+      "雙溪區",
+      "鶯歌區"
+    ],
+    "building_type": [
+      "住宅大樓(11層含以上有電梯)",
+      "公寓(5樓含以下無電梯)",
+      "華廈(10層含以下有電梯)",
+      "透天厝"
+    ]
+  },
+  "time": {
+    "origin_date": "2014-05-21",
+    "origin_month": "2014-05",
+    "latest_month_index": 144,
+    "formula": "(year - origin.year) * 12 + month - origin.month; days ignored",
+    "prediction_rule": "Use latest_month_index, not the wall clock"
+  },
+  "missing_values": {
+    "drop_training_rows_if_null": [
+      "building_age",
+      "total_floors"
+    ],
+    "fill_floor_ratio": 1.0,
+    "other_numeric_values": "No additional imputation; source has no other missing model inputs",
+    "unknown_categories": "Reject"
+  },
+  "boolean_conversion": "has_management, whole_building, bundled_parking, parking_price_is_zero cast to int with _int suffix",
+  "target": "log_price_per_ping (already natural-log transformed and winsorized upstream)",
+  "inverse_transform": "numpy.exp; quantiles, so no mean-smearing correction",
+  "quantiles": [
+    0.05,
+    0.5,
+    0.95
+  ],
+  "interval": "Nominal 5th-95th conditional quantiles; 90% coverage is not guaranteed or newly evaluated",
+  "parameters": {
+    "objective": "quantile",
+    "n_estimators": 300,
+    "max_depth": 6,
+    "learning_rate": 0.05,
+    "random_state": 42,
+    "verbosity": -1
+  },
+  "versions": {
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "lightgbm": "4.6.0",
+    "pyarrow": "24.0.0"
+  },
+  "python": "3.12.6",
+  "models": {
+    "0.05": {
+      "file": "quantile_05.txt",
+      "bytes": 894459,
+      "sha256": "660ac739c69302eab4c11feb6962867a57490685839b77cb8b3e5b18ed13e5a6",
+      "alpha": 0.05,
+      "effective_sklearn_parameters": {
+        "boosting_type": "gbdt",
+        "class_weight": null,
+        "colsample_bytree": 1.0,
+        "importance_type": "split",
+        "learning_rate": 0.05,
+        "max_depth": 6,
+        "min_child_samples": 20,
+        "min_child_weight": 0.001,
+        "min_split_gain": 0.0,
+        "n_estimators": 300,
+        "n_jobs": null,
+        "num_leaves": 31,
+        "objective": "quantile",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 0.0,
+        "subsample": 1.0,
+        "subsample_for_bin": 200000,
+        "subsample_freq": 0,
+        "verbosity": -1,
+        "alpha": 0.05
+      },
+      "native_parameters": {
+        "boosting_type": "gbdt",
+        "colsample_bytree": 1.0,
+        "learning_rate": 0.05,
+        "max_depth": 6,
+        "min_child_samples": 20,
+        "min_child_weight": 0.001,
+        "min_split_gain": 0.0,
+        "num_leaves": 31,
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 0.0,
+        "subsample": 1.0,
+        "subsample_for_bin": 200000,
+        "subsample_freq": 0,
+        "verbosity": -1,
+        "alpha": 0.05,
+        "objective": "quantile",
+        "metric": [
+          "quantile"
+        ],
+        "num_threads": 16,
+        "num_iterations": 300,
+        "categorical_column": [
+          12,
+          13
+        ]
+      }
+    },
+    "0.5": {
+      "file": "quantile_50.txt",
+      "bytes": 897890,
+      "sha256": "de0d88a32709ea41dc2f7856c4ea26242735416cf283b38d06aa639d7bc33c21",
+      "alpha": 0.5,
+      "effective_sklearn_parameters": {
+        "boosting_type": "gbdt",
+        "class_weight": null,
+        "colsample_bytree": 1.0,
+        "importance_type": "split",
+        "learning_rate": 0.05,
+        "max_depth": 6,
+        "min_child_samples": 20,
+        "min_child_weight": 0.001,
+        "min_split_gain": 0.0,
+        "n_estimators": 300,
+        "n_jobs": null,
+        "num_leaves": 31,
+        "objective": "quantile",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 0.0,
+        "subsample": 1.0,
+        "subsample_for_bin": 200000,
+        "subsample_freq": 0,
+        "verbosity": -1,
+        "alpha": 0.5
+      },
+      "native_parameters": {
+        "boosting_type": "gbdt",
+        "colsample_bytree": 1.0,
+        "learning_rate": 0.05,
+        "max_depth": 6,
+        "min_child_samples": 20,
+        "min_child_weight": 0.001,
+        "min_split_gain": 0.0,
+        "num_leaves": 31,
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 0.0,
+        "subsample": 1.0,
+        "subsample_for_bin": 200000,
+        "subsample_freq": 0,
+        "verbosity": -1,
+        "alpha": 0.5,
+        "objective": "quantile",
+        "metric": [
+          "quantile"
+        ],
+        "num_threads": 16,
+        "num_iterations": 300,
+        "categorical_column": [
+          12,
+          13
+        ]
+      }
+    },
+    "0.95": {
+      "file": "quantile_95.txt",
+      "bytes": 890752,
+      "sha256": "1d9292ed07fcc95ae9b32b16bdab995d6f1f0a9c11d5090392b3e06acd7834d0",
+      "alpha": 0.95,
+      "effective_sklearn_parameters": {
+        "boosting_type": "gbdt",
+        "class_weight": null,
+        "colsample_bytree": 1.0,
+        "importance_type": "split",
+        "learning_rate": 0.05,
+        "max_depth": 6,
+        "min_child_samples": 20,
+        "min_child_weight": 0.001,
+        "min_split_gain": 0.0,
+        "n_estimators": 300,
+        "n_jobs": null,
+        "num_leaves": 31,
+        "objective": "quantile",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 0.0,
+        "subsample": 1.0,
+        "subsample_for_bin": 200000,
+        "subsample_freq": 0,
+        "verbosity": -1,
+        "alpha": 0.95
+      },
+      "native_parameters": {
+        "boosting_type": "gbdt",
+        "colsample_bytree": 1.0,
+        "learning_rate": 0.05,
+        "max_depth": 6,
+        "min_child_samples": 20,
+        "min_child_weight": 0.001,
+        "min_split_gain": 0.0,
+        "num_leaves": 31,
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 0.0,
+        "subsample": 1.0,
+        "subsample_for_bin": 200000,
+        "subsample_freq": 0,
+        "verbosity": -1,
+        "alpha": 0.95,
+        "objective": "quantile",
+        "metric": [
+          "quantile"
+        ],
+        "num_threads": 16,
+        "num_iterations": 300,
+        "categorical_column": [
+          12,
+          13
+        ]
+      }
+    }
+  },
+  "historical_evaluation": {
+    "source": "Preserved notebooks/analysis.ipynb, saved outputs; not the reconstructed quantile estimator",
+    "target_scale": "natural log price per ping for R2; NTD/ping for MAE",
+    "rows": 98054,
+    "older_training_rows": 78443,
+    "newer_test_rows": 19611,
+    "ols_full_sample_r2": 0.7651160620122884,
+    "lightgbm_full_sample_r2": 0.861692506345294,
+    "ols_holdout_r2": 0.7459955440855299,
+    "lightgbm_holdout_r2": 0.8437454623852827,
+    "lightgbm_holdout_mae_ntd_per_ping": 74907.54197693172
+  },
+  "validation": {
+    "serialization_probe": {
+      "rows": 299,
+      "all_finite": true,
+      "crossing_rows": 6,
+      "predictions_reordered_or_clipped": false
+    },
+    "roundtrip_max_absolute_difference_ntd": 0.0,
+    "complete_modeling_population": {
+      "rows": 98054,
+      "all_finite": true,
+      "crossing_rows": 309,
+      "predictions_reordered_or_clipped": false
+    },
+    "training_seconds_by_quantile": {
+      "0.05": 2.258,
+      "0.5": 1.595,
+      "0.95": 1.458
+    },
+    "no_new_out_of_sample_evaluation": true
+  },
+  "prediction_checks": {
+    "file": "prediction_checks.json",
+    "bytes": 162996,
+    "sha256": "0cee8f7434cc2a6b1487accf938ca1bb1745163c1e35f696819807a6fe07e2b3"
+  }
+}

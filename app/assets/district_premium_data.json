@@ -1,0 +1,162 @@
+[
+  {
+    "district": "大安區",
+    "effect_pct": 209.33618023827236
+  },
+  {
+    "district": "松山區",
+    "effect_pct": 169.35414604049907
+  },
+  {
+    "district": "中正區",
+    "effect_pct": 168.44018274595686
+  },
+  {
+    "district": "信義區",
+    "effect_pct": 158.21184787436883
+  },
+  {
+    "district": "中山區",
+    "effect_pct": 136.8685666227564
+  },
+  {
+    "district": "南港區",
+    "effect_pct": 117.79803290693387
+  },
+  {
+    "district": "士林區",
+    "effect_pct": 112.59049753112045
+  },
+  {
+    "district": "大同區",
+    "effect_pct": 112.00252923283385
+  },
+  {
+    "district": "內湖區",
+    "effect_pct": 107.75335170855764
+  },
+  {
+    "district": "萬華區",
+    "effect_pct": 77.2382224149287
+  },
+  {
+    "district": "文山區",
+    "effect_pct": 76.53073467936397
+  },
+  {
+    "district": "永和區",
+    "effect_pct": 74.75160802116845
+  },
+  {
+    "district": "北投區",
+    "effect_pct": 71.57261518792943
+  },
+  {
+    "district": "板橋區",
+    "effect_pct": 58.98158864435836
+  },
+  {
+    "district": "中和區",
+    "effect_pct": 50.70164493256068
+  },
+  {
+    "district": "三重區",
+    "effect_pct": 48.285449196459936
+  },
+  {
+    "district": "蘆洲區",
+    "effect_pct": 38.80566222877499
+  },
+  {
+    "district": "新莊區",
+    "effect_pct": 32.44266403009603
+  },
+  {
+    "district": "土城區",
+    "effect_pct": 31.337839336328077
+  },
+  {
+    "district": "新店區",
+    "effect_pct": 29.453946441846
+  },
+  {
+    "district": "泰山區",
+    "effect_pct": 13.561819685477762
+  },
+  {
+    "district": "林口區",
+    "effect_pct": 10.918812911012466
+  },
+  {
+    "district": "汐止區",
+    "effect_pct": 9.48421003760853
+  },
+  {
+    "district": "樹林區",
+    "effect_pct": 6.0287151210571155
+  },
+  {
+    "district": "五股區",
+    "effect_pct": -2.796320494805604
+  },
+  {
+    "district": "深坑區",
+    "effect_pct": -7.116657251888281
+  },
+  {
+    "district": "鶯歌區",
+    "effect_pct": -15.347629497286707
+  },
+  {
+    "district": "烏來區",
+    "effect_pct": -22.795041779989024
+  },
+  {
+    "district": "淡水區",
+    "effect_pct": -24.52326212408329
+  },
+  {
+    "district": "坪林區",
+    "effect_pct": -25.95050317731059
+  },
+  {
+    "district": "八里區",
+    "effect_pct": -27.855532261705328
+  },
+  {
+    "district": "石碇區",
+    "effect_pct": -38.948854133192555
+  },
+  {
+    "district": "平溪區",
+    "effect_pct": -42.33354884294984
+  },
+  {
+    "district": "瑞芳區",
+    "effect_pct": -54.145015182730695
+  },
+  {
+    "district": "萬里區",
+    "effect_pct": -54.36632935838237
+  },
+  {
+    "district": "金山區",
+    "effect_pct": -55.28650330233711
+  },
+  {
+    "district": "石門區",
+    "effect_pct": -57.28521858639732
+  },
+  {
+    "district": "貢寮區",
+    "effect_pct": -58.31093204064896
+  },
+  {
+    "district": "三芝區",
+    "effect_pct": -58.64441661412777
+  },
+  {
+    "district": "雙溪區",
+    "effect_pct": -59.496920324402325
+  }
+]

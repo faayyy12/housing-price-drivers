@@ -1,0 +1,7 @@
+# Add this to your existing Caddyfile if your DAWS reverse proxy setup uses
+# Caddy instead of nginx. Caddy handles WebSocket upgrades automatically --
+# no extra headers needed, unlike nginx.
+
+your-subdomain.example.com {
+    reverse_proxy 127.0.0.1:8501
+}

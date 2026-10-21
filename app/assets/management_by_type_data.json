@@ -1,0 +1,38 @@
+[
+  {
+    "building_type": "透天厝",
+    "label": "Townhouse",
+    "effect_pct": -8.768179637550134,
+    "ci_low_pct": -12.324795512140696,
+    "ci_high_pct": -5.067286751536793,
+    "n": 2525,
+    "managed_pct": 42.613861386138616
+  },
+  {
+    "building_type": "公寓(5樓含以下無電梯)",
+    "label": "Walk-up",
+    "effect_pct": -10.305577223109196,
+    "ci_low_pct": -11.410858978717641,
+    "ci_high_pct": -9.186505427940627,
+    "n": 27727,
+    "managed_pct": 6.639737440040394
+  },
+  {
+    "building_type": "華廈(10層含以下有電梯)",
+    "label": "Mid-rise",
+    "effect_pct": -0.930074284956317,
+    "ci_low_pct": -1.7940823574036147,
+    "ci_high_pct": -0.05846473627240112,
+    "n": 18608,
+    "managed_pct": 84.6517626827171
+  },
+  {
+    "building_type": "住宅大樓(11層含以上有電梯)",
+    "label": "High-rise",
+    "effect_pct": 6.366358834205332,
+    "ci_low_pct": 4.964558627867355,
+    "ci_high_pct": 7.786880062611856,
+    "n": 49194,
+    "managed_pct": 98.29247469203561
+  }
+]

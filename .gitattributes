@@ -1,0 +1,5 @@
+# Hashed generated artifacts must survive Git checkout byte-for-byte.
+data/snapshots/** -text whitespace=cr-at-eol
+models/estimator/** -text whitespace=cr-at-eol
+# Existing notebook/JSON evidence keeps its normal Git text handling. Its
+# evidence hashes explicitly normalize CRLF to LF; source files are untouched.
